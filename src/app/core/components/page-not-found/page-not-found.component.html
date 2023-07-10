@@ -1,0 +1,5 @@
+<div id="not-found">
+  <h1>Uh Oh!</h1>
+  <h4>I can't find the page you're looking for. My Baaaaad.</h4>
+  <button *ngIf="displayReturnBtn" class="btn btn-primary" type="button" (click)="goBack()">Return to {{ fallbackString }} </button>
+</div>

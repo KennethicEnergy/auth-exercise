@@ -1,0 +1,23 @@
+<div id="login" class="container">
+  <div class="card">
+    <div class="card-body">
+      <form [formGroup]="loginForm">
+        <div class="col-12">
+          <input class="form-control mt-2" type="text" formControlName="username" placeholder="Username"/>
+        </div>
+        <div class="col-12">
+          <input class="form-control mt-2" type="password" formControlName="password" placeholder="Password"/>
+        </div>
+        <button 
+          class="form-control mt-4 btn" 
+          type="submit" 
+          (click)="login()" 
+          [disabled]="!loginForm.valid"
+          [ngClass]="loginForm.valid ? 'btn-primary' : 'btn-secondary'">
+          Login
+        </button>
+        <a class="forgot-link" href="">Forgot Username / Password?</a>
+      </form>
+    </div>
+  </div>
+</div>
